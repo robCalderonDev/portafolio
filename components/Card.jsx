@@ -8,7 +8,7 @@ export const Card = ({ title, content, page, code, images, description }) => {
             <div className='flex flex-wrap w-4/6 h-full lg:h-80 bg-[#F5F5F5] rounded-xl mx-auto drop-shadow-md'>
                 <div className='   lg:w-1/2 l'>
                     <div className='bg-red-50 lg:w-3/5 w-4/5   mt-10 mx-auto '>  <Image
-                        src={`/assets/${images}.png`}
+                        src={`assets/${images}.png`}
                         width={80}
                         height={80}
                         layout='responsive'
