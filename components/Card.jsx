@@ -14,6 +14,7 @@ export const Card = ({ title, content, page, code, images, description }) => {
                         layout='responsive'
                         alt="Robert Image"
                     />
+
                     </div>
                 </div>
                 <div className=' lg:w-1/2 w-full font-semibold'>

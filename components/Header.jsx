@@ -8,12 +8,12 @@ const Header = () => {
 
                 <Image
                     src="assets/robert.png"
-
                     width={160}
                     height={160}
                     layout="fixed"
                     alt='Robert Image'
                 />
+
                 <h1 className='text-3xl font-semibold '>Robert Calderon</h1>
                 <hr className="w-44 h-px my-1 bg-[#3B94A8]  border-0 " />
                 <h1 className='text-[#3B94A8] text-xl'>Desarrollador web</h1>
