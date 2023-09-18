@@ -32,10 +32,10 @@ const Navbar = () => {
             <div className={`${open ? 'block ' : 'hidden'} w-full lg:flex lg:items-center  lg:w-auto mr-10    `}>
 
 
-                <ul className='lg:flex  lg:justify-between'>
-                    <l1 className='lg:mr-10 block my-2'>sobre mi</l1>
-                    <l1 className='lg:mr-10 block my-2'>Proyectos</l1>
-                    <l1 className='lg:mr-10 block my-2'>Contacto</l1>
+                <ul className='lg:flex  lg:justify-between '>
+                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>sobre mi</l1>
+                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Proyectos</l1>
+                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Contacto</l1>
                 </ul>
 
 

@@ -79,7 +79,7 @@ const Content = () => {
                         height={80}
                         layout='responsive'
                         alt="Robert Image"
-                        className='mt-5'
+
 
                     /></div>
 

@@ -4,7 +4,7 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-            <div className='grid justify-items-center  pt-5'>
+            <div className='grid justify-items-center  pt-5 '>
 
                 <Image
                     src="/assets/robert.png"
