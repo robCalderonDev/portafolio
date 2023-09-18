@@ -33,7 +33,7 @@ const Contact = () => {
             <div className='flex  justify-center'>
                 <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Conversemos!</h1>
                 <Image
-                    src='/assets/email.png?v=2'
+                    src='public/assets/email.PNG'
                     width={50}
                     height={50}
                     className=''
