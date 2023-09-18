@@ -33,16 +33,16 @@ const Contact = () => {
             <div className='flex  justify-center'>
                 <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Conversemos!</h1>
                 <Image
-                    src={`/assets/email.png`}
+                    src={`/assets/email.png?v=2`}
                     width={50}
                     height={50}
                     className=''
-                    alt="Robert Image"
+                    alt="mail"
                 />
 
             </div>
             <form ref={form} onSubmit={sendEmail} className="w-2/4 mx-auto   mb-10">
-                <div className='flex flex-wrap justify-between'>
+                <div className='flex fles-wrap justify-between'>
                     <div className=" border-b  border-[#3B94A8] py-2 w-72">
 
                         <input onChange={(e) => setName(e.target.value)} value={name} className="appearance-none on bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" name='user_name' placeholder="Nombre" aria-label="nombre" />
