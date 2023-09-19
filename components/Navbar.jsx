@@ -40,12 +40,12 @@ const Navbar = () => {
                 </ul>
 
 
-
-                <button className='  min-w-fit  border-solid border border-white rounded flex  py-1 h-10 px-3  my-2 '>
+                <Link href='https://robcalderondev.github.io/portafolio/assets/RobertCalderonCV.pdf' target='_blank'>  <button className='   min-w-fit  border-solid border border-white rounded flex  py-1 h-10 px-3  my-2 hover:text-cyan-200 '>
                     <h1 className='text-sm my-1 pr-4  '>CV</h1>
 
                     <CgFileDocument className='w-6 h-6' />
-                </button>
+                </button></Link>
+
                 <div className=' mx-6 lg:mt-2 lg:block my-2'>
                     <BsFillSunFill className='h-6 w-6' />
 
