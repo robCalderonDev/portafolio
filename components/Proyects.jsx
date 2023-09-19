@@ -5,9 +5,9 @@ import { descriptions } from './info/info'
 const Proyects = () => {
     console.log(descriptions)
     return (
-        <div className="mt-10">
+        <div id='proyects' className="mt-10">
             <div className="flex flex-col items-center justify-center w-full">
-                <h1 className="text-4xl font-semibold">Proyectos</h1>
+                <h1 className="text-4xl font-semibold">Proyects</h1>
                 <hr className="w-44 h-px my-1 bg-[#3B94A8] border-0" />
             </div>
             {descriptions.map((i) => (

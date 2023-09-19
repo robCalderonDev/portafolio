@@ -4,7 +4,7 @@ import React from 'react'
 const Header = () => {
     return (
         <>
-            <div className='grid justify-items-center  pt-5 '>
+            <div id='aboutMe' className='grid justify-items-center  pt-5 '>
 
                 <Image
                     src="assets/robert.png"
@@ -16,12 +16,12 @@ const Header = () => {
 
                 <h1 className='text-3xl font-semibold '>Robert Calderon</h1>
                 <hr className="w-44 h-px my-1 bg-[#3B94A8]  border-0 " />
-                <h1 className='text-[#3B94A8] text-xl'>Desarrollador web</h1>
+                <h1 className='text-[#3B94A8]  text-2xl'>Web Developer</h1>
                 <div className='w-2/4 text-xl mt-10'>
-                    <p className=' mb-10'>Soy un apasionado <span className='text-[#3B94A8] '>desarrollador front-end </span> con una profunda pasión por la <span className='text-[#3B94A8]'>tecnología</span>  y la programación. Actualmente, me encuentro en mi último año de estudios de Ingeniería en Informática, y a mis 22 años, vivo en Chile. Mi enfoque principal se centra en el desarrollo web y las tecnologías en la nube, dos áreas en constante evolución que me inspiran a aprender y crecer continuamente.
-
+                    <p className=' mb-10'>I am a passionate <span className='text-[#3B94A8] '>front-end developer </span> with a deep passion for <span className='text-[#3B94A8]'>technology</span> and programming. Currently, I am in my final year of Computer Science bachelor, and at 22 years old, I live in Chile. My primary focus is on web development and cloud technologies, two constantly evolving areas that inspire me to learn and grow continuously.
                     </p>
-                    <p >Lo que realmente me destaca es mi fuerte compromiso con el <span className='text-[#3B94A8] '>trabajo en equipo </span>. Creo firmemente en la colaboración como una clave para el éxito en cualquier proyecto. Mi mentalidad abierta y mi disposición para enfrentar nuevos desafíos me impulsan a buscar siempre oportunidades para aprender y mejorar.</p>
+
+                    <p>What truly sets me apart is my strong commitment to <span className='text-[#3B94A8] '>teamwork</span>. I firmly believe in collaboration as a key to success in any project. My open-mindedness and willingness to tackle new challenges drive me to constantly seek opportunities for learning and improvement.</p>
 
                 </div>
             </div>

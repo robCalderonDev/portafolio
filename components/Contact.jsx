@@ -29,9 +29,9 @@ const Contact = () => {
             });
     };
     return (
-        <div className=' mt-10'>
+        <div id='contact' className=' mt-10'>
             <div className='flex  justify-center'>
-                <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Conversemos!</h1>
+                <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Let's Talk!</h1>
                 <Image
                     src='assets/email.png'
                     width={50}

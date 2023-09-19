@@ -3,6 +3,7 @@ import Image from 'next/image'; // Importa la imagen de Next.js
 import { BsFillSunFill } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { CgFileDocument } from 'react-icons/cg'
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -33,9 +34,9 @@ const Navbar = () => {
 
 
                 <ul className='lg:flex  lg:justify-between '>
-                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>sobre mi</l1>
-                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Proyectos</l1>
-                    <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Contacto</l1>
+                    <Link href="#aboutMe"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>About Me</l1></Link>
+                    <Link href="#proyects"><l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Proyects</l1></Link>
+                    <Link href="#contact"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Contact</l1></Link>
                 </ul>
 
 
