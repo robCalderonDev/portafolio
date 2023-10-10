@@ -24,7 +24,7 @@ const Modal = ({ setModal, modal }) => {
 
                         <div className="mb-8">
                             <div className='flex'>
-                                <h1 class="mb-4 text-3xl font-extrabold mr-5 pt-2">Gracias!</h1>
+                                <h1 class="mb-4 text-3xl font-extrabold mr-5 pt-2 dark:text-gray-900">Gracias!</h1>
                                 <BsCheck2All className='text-5xl bg-green-200 border text-[#469abe] border-green-500 rounded-3xl' />
                             </div>
 

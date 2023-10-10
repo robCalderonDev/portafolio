@@ -31,7 +31,7 @@ const Soft = () => {
                                 width={80}
                                 height={80}
                                 layout='responsive'
-                                alt="Robert Image"
+                                alt="/Robert Image"
 
                             />
                         </div>

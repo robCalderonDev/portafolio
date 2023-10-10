@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image'; // Importa la imagen de Next.js
 import { BsFillSunFill } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
@@ -6,10 +6,21 @@ import { CgFileDocument } from 'react-icons/cg'
 import Link from 'next/link';
 
 const Navbar = () => {
+    const [theme, setTheme] = useState('light')
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.querySelector('html').classList.add('dark')
+        } else {
+            document.querySelector('html').classList.remove('dark')
+        }
+    }, [theme])
 
+    const handleChangeTheme = () => {
+        setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+    }
     const [open, setOpen] = useState(false)
     return (
-        <div className='bg-[#3B94A8]  flex items-center justify-between  max-w-full  text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
+        <div className='bg-[#3B94A8] dark:bg-cyan-950  flex items-center justify-between  max-w-full  text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
             <div className='py-1  flex  min-w-fit'>
 
                 <Image
@@ -46,10 +57,10 @@ const Navbar = () => {
                     <CgFileDocument className='w-6 h-6' />
                 </button></Link>
 
-                <div className=' mx-6 lg:mt-2 lg:block my-2'>
-                    <BsFillSunFill className='h-6 w-6' />
+                <button onClick={handleChangeTheme} className=' mx-6 lg:mt-2 lg:block my-2'>
+                    <BsFillSunFill className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />
 
-                </div>
+                </button>
             </div>
 
 

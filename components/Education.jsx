@@ -2,7 +2,7 @@ import React from 'react'
 
 const Education = () => {
     return (
-        <div className='bg-[#3382A5] h-full'>
+        <div className='bg-[#3382A5] dark:bg-cyan-950 h-full'>
             <h1 className='text-white text-3xl text-center pt-5'>My Education</h1>
             <h1 className='text-white text-lg text-center pt-2'>Where I Studied?</h1>
             <div className='flex flex-wrap justify-center pb-10 mt-4 gap-10'>
