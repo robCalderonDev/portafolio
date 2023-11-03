@@ -8,6 +8,7 @@ import Soft from '@/components/Soft'
 import Proyects from '@/components/Proyects'
 import Footer from '@/components/info/Footer'
 import Contact from '@/components/Contact'
+import BackTopButton from '@/components/BackTopButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +26,7 @@ export default function Home() {
       <Proyects />
       <Contact />
       <Footer />
+      <BackTopButton />
     </main >
   )
 }

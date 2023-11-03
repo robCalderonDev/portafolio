@@ -3,6 +3,7 @@ import Image from 'next/image'; // Importa la imagen de Next.js
 import { BsFillSunFill } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { CgFileDocument } from 'react-icons/cg'
+import { BiSolidMoon } from 'react-icons/bi'
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
             <div className='py-1  flex  min-w-fit'>
 
                 <Image
-                    src="assets/robert.png"
+                    src="/assets/robert.png"
                     className='mr-10'
                     width={70}
                     height={100}
@@ -58,7 +59,8 @@ const Navbar = () => {
                 </button></Link>
 
                 <button onClick={handleChangeTheme} className=' mx-6 lg:mt-2 lg:block my-2'>
-                    <BsFillSunFill className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />
+                    {theme === 'light' ? <BsFillSunFill className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />
+                        : <BiSolidMoon className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />}
 
                 </button>
             </div>
