@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className='py-1  flex  min-w-fit'>
 
                 <Image
-                    src="/assets/robert.png"
+                    src="assets/robert.png"
                     className='mr-10'
                     width={70}
                     height={100}
