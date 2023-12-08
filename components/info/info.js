@@ -31,6 +31,22 @@ export const descriptions = [
         code: 'https://github.com/christian-aguilar1/pagecemet',
         images: 'portafoliorob',
         description: 'This same portfolio is built with Next.js, HTML, CSS, and Tailwind, and is deployed on Github Pages.'
+    },
+    {
+        id: 5,
+        title: 'Safety Community',
+        page: 'https://portafolio-titulo.netlify.app/',
+        code: 'https://github.com/Pibanezl/capstone-app',
+        images: 'safetycommunityweb',
+        description: 'Safety Community is dedicated to addressing the issue of violence and bullying in educational institutions by improving the analysis and visualization of student-related data. This involves utilizing a comprehensive web and mobile platform with advanced software tools, including dashboards and data monitoring capabilities. The goal is to empower educational stakeholders to make informed decisions, ultimately prioritizing the well-being of the student community through strategic data-driven approaches.'
+    },
+    {
+        id: 6,
+        title: 'Safety Community',
+        page: 'https://drive.google.com/drive/folders/1G5CL3SXk_09ND5SzFSIhPYQZr5N9LOpH?usp=drive_link',
+        code: 'https://github.com/Pibanezl/capstone-app',
+        images: 'safetycommunitymobile',
+        description: 'The mobile application for Safety Community'
     }
 ];
 

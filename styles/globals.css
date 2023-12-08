@@ -1,11 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
-  font-family: 'Blinker', sans-serif;
-}
-
-body {
-  background-color: azures;
+  font-family: 'Open Sans', sans-serif;
 }

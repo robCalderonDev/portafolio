@@ -21,22 +21,22 @@ const Navbar = () => {
     }
     const [open, setOpen] = useState(false)
     return (
-        <div className='bg-[#3B94A8] dark:bg-cyan-950  flex items-center justify-between  max-w-full  text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
+        <div className='bg-[#376F9B] lg:h-20 dark:bg-cyan-950  flex items-center justify-between  max-w-full  text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
             <div className='py-1  flex  min-w-fit'>
 
                 <Image
                     src="assets/robert.png"
                     className='mr-10'
-                    width={70}
+                    width={60}
                     height={100}
                     layout="fixed"
                     alt='Robert Image'
                 />
 
 
-                <div className='text-md'>
-                    <h1 className=''>Robert </h1>
-                    <h1 className=''>Calderon</h1>
+                <div className='text-md pt-5'>
+                    <h1 className=''>Robert Calderon </h1>
+
                 </div>
 
             </div>
@@ -46,16 +46,16 @@ const Navbar = () => {
 
 
                 <ul className='lg:flex  lg:justify-between '>
-                    <Link href="#aboutMe"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>About Me</l1></Link>
-                    <Link href="#proyects"><l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Proyects</l1></Link>
-                    <Link href="#contact"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-200'>Contact</l1></Link>
+                    <Link href="#aboutMe"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-950'>About Me</l1></Link>
+                    <Link href="#proyects"><l1 className='lg:mr-10 block my-2 hover:text-cyan-950'>Proyects</l1></Link>
+                    <Link href="#contact"> <l1 className='lg:mr-10 block my-2 hover:text-cyan-950'>Contact</l1></Link>
                 </ul>
 
 
                 <Link href='https://robcalderondev.github.io/portafolio/assets/RobertCalderonCV.pdf' target='_blank'>  <button className='   min-w-fit  border-solid border border-white rounded flex  py-1 h-10 px-3  my-2 hover:-translate-y-0.5 transition duration-150 '>
                     <h1 className='text-sm my-1 pr-4  '>CV</h1>
 
-                    <CgFileDocument className='w-6 h-6' />
+                    <CgFileDocument className='w-6 h-6 hover:text-cyan-950 dark:text-white' />
                 </button></Link>
 
                 <button onClick={handleChangeTheme} className=' mx-6 lg:mt-2 lg:block my-2'>

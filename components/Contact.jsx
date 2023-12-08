@@ -43,22 +43,48 @@ const Contact = () => {
 
             </div>
             <form ref={form} onSubmit={sendEmail} className="w-2/4 mx-auto   mb-10">
-                <div className='flex fles-wrap justify-between'>
-                    <div className=" border-b  border-[#3B94A8] py-2 w-72">
+                <div className='flex flex-wrap justify-between'>
+                    <div className="border-b border-[#3B94A8] py-2 w-full sm:w-72">
 
-                        <input onChange={(e) => setName(e.target.value)} value={name} className="dark:text-white appearance-none on bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" name='user_name' placeholder="Nombre" aria-label="nombre" />
-
+                        <input
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                            className="dark:text-white appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                            required
+                            type="text"
+                            name='user_name'
+                            placeholder="Nombre"
+                            aria-label="nombre"
+                        />
 
                     </div>
-                    <div className=" border-b border-[#3B94A8] py-2 w-72">
-                        <input onChange={(e) => setMail(e.target.value)} value={mail} className="dark:text-white appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none " name='user_mail' required type="email" placeholder="Email" aria-label="email" />
-
-
+                    <div className="border-b border-[#3B94A8] py-2 w-full sm:w-72">
+                        <input
+                            onChange={(e) => setMail(e.target.value)}
+                            value={mail}
+                            className="dark:text-white appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none "
+                            name='user_mail'
+                            required
+                            type="email"
+                            placeholder="Email"
+                            aria-label="email"
+                        />
                     </div>
                 </div>
 
 
-                <textarea onChange={(e) => setMessage(e.target.value)} value={message} id="message" className=" placeholder: focus:outline-none bg-slate-50 w-full mt-16 border dark:bg-neutral-900 border-slate-300  h-52" placeholder="Mensaje " name='message' type='text' required></textarea>
+
+                <textarea
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
+                    id="message"
+                    className=" bg-slate-50 dark:bg-neutral-900 w-full mt-16 border  border-[#3B94A8] rounded h-52 focus:border-[#3B94A8] dark:focus:border-[#3B94A8] focus:outline-none"
+                    placeholder="Mensaje"
+                    name="message"
+                    type="text"
+                    required
+                    style={{ paddingTop: '15px', paddingLeft: '15px' }}  // Añadir estilo de padding al placeholder
+                ></textarea>
                 <div className='flex justify-center mt-5'>
                     <button className='bg-[#3B94A8] w-52 h-12 rounded text-white text-2xl hover:bg-[#469abe]'>Enviar</button>
                 </div>
