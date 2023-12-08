@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card } from './Card'
-import cemet from './../public/assets/cemet.png'
 import { descriptions } from './info/info'
 const Proyects = () => {
     console.log(descriptions)
@@ -20,4 +19,3 @@ const Proyects = () => {
 
 export default Proyects
 
-// < Card images = { 'cemet'} title = { 'Cemet Usach'} code = { 'https://github.com/christian-aguilar1/pageCEMET'} page = { 'https://cemetusach.cl/'} />

@@ -19,7 +19,7 @@ const Content = () => {
                             width={80}
                             height={80}
                             layout='responsive'
-                            alt="Robert Image"
+                            alt="Html Image"
 
                         />
                     </div>
@@ -30,7 +30,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="Css Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">  <Image
@@ -38,7 +38,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="React Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
@@ -46,7 +46,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="Next Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
@@ -54,7 +54,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="Python Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none   rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
@@ -62,7 +62,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="github Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100   dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
@@ -70,7 +70,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="Java Image"
 
                     /></div>
                     <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
@@ -78,7 +78,7 @@ const Content = () => {
                         width={80}
                         height={80}
                         layout='responsive'
-                        alt="Robert Image"
+                        alt="Tailwind Image"
 
 
                     /></div>

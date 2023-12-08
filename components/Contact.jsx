@@ -42,9 +42,9 @@ const Contact = () => {
 
 
             </div>
-            <form ref={form} onSubmit={sendEmail} className="w-2/4 mx-auto   mb-10">
+            <form ref={form} onSubmit={sendEmail} className="w-2/4 mx-auto    mb-10">
                 <div className='flex flex-wrap justify-between'>
-                    <div className="border-b border-[#3B94A8] py-2 w-full sm:w-72">
+                    <div className="border-b border-[#3B94A8] py-2 w-full  lg:w-5/12  ">
 
                         <input
                             onChange={(e) => setName(e.target.value)}
@@ -58,7 +58,7 @@ const Contact = () => {
                         />
 
                     </div>
-                    <div className="border-b border-[#3B94A8] py-2 w-full sm:w-72">
+                    <div className="border-b border-[#3B94A8] py-2 w-full  lg:w-5/12">
                         <input
                             onChange={(e) => setMail(e.target.value)}
                             value={mail}
@@ -86,7 +86,7 @@ const Contact = () => {
                     style={{ paddingTop: '15px', paddingLeft: '15px' }}  // Añadir estilo de padding al placeholder
                 ></textarea>
                 <div className='flex justify-center mt-5'>
-                    <button className='bg-[#3B94A8] w-52 h-12 rounded text-white text-2xl hover:bg-[#469abe]'>Enviar</button>
+                    <button className='bg-[#3B94A8] w-52 h-12 rounded text-white text-2xl hover:bg-[#469abe]'>Send</button>
                 </div>
 
             </form>

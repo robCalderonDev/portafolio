@@ -31,7 +31,7 @@ export const Card = ({ title, content, page, code, images, description }) => {
             <div className=' lg:w-1/2 w-full font-semibold dark:font-normal h-full'>
                 <h1 className='text-center text-xl  mt-5'> {title}</h1>
                 <div className=' w-3/4 mx-auto dark: mt-5'>
-                    <p>   {description}  </p>
+                    <p className='text-left'>{description}  </p>
                 </div>
                 <div className=' flex justify-evenly gap-x-10 mt-5 mb-10'>
 
