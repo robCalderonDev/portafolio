@@ -42,7 +42,7 @@ const Contact = () => {
 
 
             </div>
-            <form ref={form} onSubmit={sendEmail} className="w-2/4 mx-auto    mb-10">
+            <form ref={form} onSubmit={sendEmail} className=" w-3/4  lg:w-2/4 mx-auto    mb-10">
                 <div className='flex flex-wrap justify-between'>
                     <div className="border-b border-[#3B94A8] py-2 w-full  lg:w-5/12  ">
 
