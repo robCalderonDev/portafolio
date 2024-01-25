@@ -43,8 +43,8 @@ export const descriptions = [
     {
         id: 6,
         title: 'RobCalderonDev',
-        page: 'https://cemetusach.cl/',
-        code: 'https://github.com/christian-aguilar1/pagecemet',
+        page: 'https://robcalderondev.github.io/portafolio/',
+        code: 'https://github.com/robCalderonDev/portafolio',
         images: 'portafoliorob',
         description: 'This same portfolio is built with Next.js, HTML, CSS, and Tailwind, and is deployed on Github Pages.'
     },

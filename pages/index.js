@@ -1,5 +1,5 @@
 
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/navbar/Navbar'
 import Header from '@/components/Header'
 import Content from '@/components/Content'
 import Education from '@/components/Education'
