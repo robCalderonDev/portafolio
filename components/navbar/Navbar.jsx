@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className='bg-[#376F9B] lg:h-20 dark:bg-cyan-950 flex items-center justify-between max-w-full text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
             <div className='py-1 flex min-w-fit'>
                 <Image
-                    src="/assets/robert.png"
+                    src="assets/robert.png"
                     className='mr-10'
                     width={60}
                     height={100}

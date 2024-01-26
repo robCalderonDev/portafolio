@@ -10,7 +10,7 @@ export const Card = ({ title, content, page, code, images, description }) => {
             <div className='lg:w-1/2 w-full  h-full flex justify-center items-center'>
                 {images === 'safetycommunitymobile' ?
                     <div className=' w-32 pb-10  mt-10 '>  <Image
-                        src={`/assets/${images}.png`}
+                        src={`assets/${images}.png`}
                         width={130}
                         height={20}
 
@@ -18,7 +18,7 @@ export const Card = ({ title, content, page, code, images, description }) => {
                     />
 
                     </div> : <div className=' lg:w-3/5  mt-10 mx-auto flex justify-center pb-10   '>  <Image
-                        src={`/assets/${images}.png`}
+                        src={`assets/${images}.png`}
                         width={20}
                         height={20}
                         layout='responsive'
