@@ -7,7 +7,7 @@ const Header = () => {
             <div id='aboutMe' className='grid justify-items-center  pt-5 '>
 
                 <Image
-                    src="=assets/robert.png"
+                    src="assets/robert.png"
                     width={160}
                     height={160}
                     layout="fixed"
