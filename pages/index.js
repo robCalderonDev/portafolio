@@ -12,7 +12,7 @@ import BackTopButton from '@/components/BackTopButton'
 
 export default function Home() {
   return (
-    <main className='bg-slate-50 dark:bg-neutral-900 dark:text-white'
+    <main className='bg-slate-100 dark:bg-[#080F17]  dark:text-white'
 
     >
 

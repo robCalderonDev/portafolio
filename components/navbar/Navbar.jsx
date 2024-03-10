@@ -20,23 +20,28 @@ const Navbar = () => {
     };
 
     return (
-        <div className='bg-[#376F9B] lg:h-20 dark:bg-cyan-950 flex items-center justify-between max-w-full text-white font-medium text-xl py-auto px-[8%] flex-wrap w-full'>
+        <div className='fixed top-0 left-0 w-full  z-50 bg-[#376F9B] lg:h-18 dark:bg-cyan-950 flex items-center justify-between max-w-full text-white font-medium text-xl py-auto px-[8%] flex-wrap '>
             <div className='py-1 flex min-w-fit'>
-                <Image
-                    src="assets/robert.png"
-                    className='mr-10'
-                    width={60}
-                    height={100}
-                    layout="fixed"
-                    alt='Robert Image'
-                />
-                <div className='text-md pt-5'>
-                    <h1 className=''>Robert Calderon </h1>
+                {/* <Image
+                src="/assets/robert.png"
+                className='mr-10'
+                width={60}
+                height={100}
+                layout="fixed"
+                alt='Robert Image'
+            /> */}
+                <div className='text-md py-3'>
+                    <h1>Rob Calderon Portafolio</h1>
                 </div>
             </div>
-            <AiOutlineMenu className='lg:hidden block h-7 w-7' onClick={() => setOpen(!open)} />
+            <button>
+                <AiOutlineMenu className='lg:hidden block h-7 w-7' onClick={() => setOpen(!open)} />
+
+            </button>
             <Options handleChangeTheme={handleChangeTheme} open={open} theme={theme} />
         </div>
+
+
     );
 };
 export default Navbar

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
-import Modal from './Modal';
+import Modal from './modals/Modal';
 import { BsCheck2All } from 'react-icons/bs'
 import { AiOutlineClose } from 'react-icons/ai';
 const Contact = () => {
@@ -29,11 +29,11 @@ const Contact = () => {
             });
     };
     return (
-        <div id='contact' className=' mt-10'>
+        <div id='contact' className=' mt-10 fade-in-element'>
             <div className='flex  justify-center'>
                 <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Let's Talk!</h1>
                 <Image
-                    src='assets/email.png'
+                    src='/assets/email.png'
                     width={50}
                     height={50}
                     className=''
