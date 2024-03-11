@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { LuCode2 } from 'react-icons/lu';
 import { BiLinkExternal } from 'react-icons/bi';
-import MoreInfoModal from './modals/moreInfoModal';
 
 export const Card = ({ title, content, page, code, images, description, shortDescription, id, searchProyect }) => {
 
