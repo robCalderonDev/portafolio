@@ -1,36 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Las fuentes (Sora y Figtree) se cargan en pages/_document.js */
 
-:root {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-body * {
-  @apply transition-colors duration-75;
-
-}
-
-.fade-in-element {
-  opacity: 0;
-  animation: fade-in 2s forwards;
-}
-
-.fade-in-element:not(:hover) {
-  animation-play-state: paused;
-  /* Pausa la animación inicialmente */
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* deja espacio para el navbar fijo al saltar a una sección */
+    scroll-padding-top: 5rem;
   }
 
-  to {
-    opacity: 1;
+  body {
+    @apply bg-paper text-ink font-sans antialiased dark:bg-night dark:text-slate-200;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  /* foco visible para navegación con teclado */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper dark:ring-offset-night;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }

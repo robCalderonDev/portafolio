@@ -1,41 +1,21 @@
 import React from 'react';
-import { BsCheck2All } from 'react-icons/bs'
-import { AiOutlineClose } from 'react-icons/ai';
+import { BsCheck2All } from 'react-icons/bs';
+import ModalShell from './ModalShell';
+import { useTranslation } from '@/i18n/I18nProvider';
 
-const Modal = ({ setModal, modal }) => {
-    const handleCloseModal = () => {
-        setModal(!modal);
-    };
-
+// Confirmación después de enviar el formulario de contacto
+const Modal = ({ setModal }) => {
+    const { t } = useTranslation();
     return (
-
-
-
-
-        <div class="fixed left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-50 ">
-
-            <div className="max-h-full w-full max-w-xl overflow-y-auto rounded bg-white">
-                <div className="w-full h-56">
-                    <div className='flex justify-end'>
-                        <button className='m-3' onClick={handleCloseModal}> <AiOutlineClose className='hover:text-gray-500' /></button>
-                    </div>
-
-                    <div className="flex pl-16  ">
-
-                        <div className="mb-8">
-                            <div className='flex'>
-                                <h1 class="mb-4 text-3xl font-extrabold mr-5 pt-2 dark:text-gray-900">Gracias!</h1>
-                                <BsCheck2All className='text-5xl bg-green-200 border text-[#469abe] border-green-500 rounded-3xl' />
-                            </div>
-
-                            <p className="text-gray-600">Te contactare Lo mas pronto posible.</p>
-                        </div>
-                    </div>
-                    <button className='bg-[#3B94A8] ml-16 w-20 h-10 rounded text-white text-xl hover:bg-[#469abe]' onClick={handleCloseModal} >Cerrar</button>
-
-                </div>
+        <ModalShell onClose={() => setModal(false)} labelledBy='thanks-modal-title'>
+            <div className='flex items-center gap-4'>
+                <span className='grid h-12 w-12 place-items-center rounded-full bg-brand-mist text-brand-deep'>
+                    <BsCheck2All className='h-6 w-6' />
+                </span>
+                <h2 id='thanks-modal-title' className='text-2xl font-semibold tracking-tight'>{t('contact.thanksTitle')}</h2>
             </div>
-        </div>
+            <p className='mt-4 text-slate-600 dark:text-slate-300'>{t('contact.thanksMessage')}</p>
+        </ModalShell>
     );
 };
 

@@ -1,61 +1,47 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { LuCode2 } from 'react-icons/lu';
 import { BiLinkExternal } from 'react-icons/bi';
+import { useTranslation } from '@/i18n/I18nProvider';
 
-export const Card = ({ title, content, page, code, images, description, shortDescription, id, searchProyect }) => {
-
-    const [modal, setModal] = useState(false)
+export const Card = ({ title, page, code, images, shortDescription, id, searchProyect }) => {
+    const { t } = useTranslation();
+    // La captura de la app móvil es vertical: se muestra completa en vez de recortarla
+    const isMobileShot = images === 'safetycommunitymobile';
 
     return (
-        <div className='lg:w-1/5 w-2/3 mt-10 bg-[#F5F5F5] dark:bg-cyan-950 rounded-xl drop-shadow-md'>
-            <div className='flex justify-center'>
-                <div className='rounded-t-xl overflow-hidden'>
-                    {images === 'safetycommunitymobile' ?
-                        <Image
-                            src={`assets/${images}.png`}
-                            width={90}
-                            height={20}
-                            alt="Proyect Image"
-                        /> : <Image
-                            src={`assets/${images}.png`}
-                            width={20}
-                            height={20}
-                            layout='responsive'
-                            alt="Proyect Image"
-                        />}
-                </div>
-            </div>
-            <div className='w-full font-semibold dark:font-normal h-full'>
-                <h1 className='text-center text-2xl mt-5 font-semibold'>{title}</h1>
-                <div className='w-3/4 mx-auto dark:mt-5 '>
-                    <p className='text-center'>{shortDescription} </p>
-                    <div className='flex items-center justify-center'>
-                        <button className='' onClick={() => searchProyect(id)}>
-                            <p className='text-center text-sm hover:text-gray-600'>Leer Mas...</p>
-                        </button>
-                    </div>
-
-
-
-                </div>
-                <div className='flex justify-evenly gap-x-10 mb-4 pt-2'>
-                    <Link href={code} target='blank'>
-                        <button className='bg-[#225166] flex justify-center 2xl:pt-3 pt-3 lg:pt-3 text-white rounded 2xl:w-20 lg:w-20 w-16 h-12 font-light text-sm lg:text-base hover:bg-[#367C9B] hover:drop-shadow-md hover:-translate-y-1 transition duration-150'>
-                            <LuCode2 className='mt-1' />
-                        </button>
-                    </Link>
-                    <Link href={page} target='_blank'>
-                        <button className='bg-[#225166] flex justify-evenly pt-3 text-white rounded 2xl:w-20 lg:w-20 w-16 h-12 font-light text-sm lg:text-base hover:bg-[#367C9B] hover:drop-shadow-md hover:-translate-y-1 transition duration-150'>
-                            <BiLinkExternal className='text-xl mt-0.5' />
-                        </button>
-                    </Link>
-                </div>
+        <article className='flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-paper hover:border-brand/50 dark:border-white/10 dark:bg-night dark:hover:border-brand-light/40 transition-colors'>
+            <div className='aspect-[16/10] overflow-hidden border-b border-slate-200 bg-brand-mist dark:border-white/10 dark:bg-night-surface'>
+                <Image
+                    src={`assets/${images}.png`}
+                    width={640}
+                    height={400}
+                    className={`h-full w-full ${isMobileShot ? 'object-contain p-3' : 'object-cover object-top'}`}
+                    alt={`${t('projects.imageAlt')}: ${title}`}
+                />
             </div>
 
-        </div>
+            <div className='flex flex-1 flex-col p-5'>
+                <h3 className='text-lg font-semibold'>{title}</h3>
+                <p className='mt-2 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300'>{shortDescription}</p>
 
+                <button
+                    type='button'
+                    onClick={() => searchProyect(id)}
+                    className='mt-3 self-start text-sm font-medium text-brand-deep hover:underline dark:text-brand-light'
+                >
+                    {t('projects.readMore')}
+                </button>
 
+                <div className='mt-5 flex gap-5 border-t border-slate-200 pt-4 text-sm font-medium dark:border-white/10'>
+                    <a href={code} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-slate-600 hover:text-brand-deep dark:text-slate-300 dark:hover:text-brand-light transition-colors'>
+                        <LuCode2 className='h-4 w-4' /> {t('projects.code')}
+                    </a>
+                    <a href={page} target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-1.5 text-slate-600 hover:text-brand-deep dark:text-slate-300 dark:hover:text-brand-light transition-colors'>
+                        <BiLinkExternal className='h-4 w-4' /> {t('projects.visit')}
+                    </a>
+                </div>
+            </div>
+        </article>
     );
 };

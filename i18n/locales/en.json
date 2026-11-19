@@ -1,0 +1,98 @@
+{
+  "navbar": {
+    "title": "Rob Calderon Portfolio",
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cv": "CV",
+    "cvFile": "assets/RobertCalderonCV_en.pdf",
+    "cvDownloadName": "Robert_Calderon_CV_EN.pdf",
+    "cvDownload": "Download CV (English)",
+    "language": "Language",
+    "toggleTheme": "Toggle light/dark theme",
+    "openMenu": "Open menu"
+  },
+  "header": {
+    "greeting": "Hi!, I'm",
+    "role": "& I'm a Software Developer",
+    "imageAlt": "Photo of Robert Calderon",
+    "p1": "I'm a <hl>Computer Engineer</hl> with more than 3 years of experience building <hl>web and mobile applications</hl>. I specialize in frontend with React, Angular and Next.js, backend with Node.js, Java and Spring Boot, and Android development, working with SQL and NoSQL databases such as MySQL and MongoDB.",
+    "p2": "I currently work as a Software Developer, developing and maintaining a monitoring system with React, Angular, Node.js, Spring Boot and RabbitMQ. Before that, I worked at AFP Capital, Beemining (BHP) and Kyndryl. I focus on building <hl>scalable and maintainable solutions</hl>, I'm always looking to improve processes and adopt new technologies, and I work with Scrum, Git and AWS. I have an upper-intermediate English level (B2 – TOEIC).",
+    "ctaProjects": "See my projects",
+    "ctaContact": "Get in touch"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "education": {
+    "title": "My Education",
+    "subtitle": "Where did I study?",
+    "duoc": {
+      "school": "Instituto Profesional Duoc UC",
+      "degree": "Computer Engineering"
+    },
+    "cumbre": {
+      "school": "Instituto Cumbre de Condores",
+      "degree": "Telecommunications Technician (high school)"
+    }
+  },
+  "softSkills": {
+    "title": "Soft Skills",
+    "teamwork": "Teamwork",
+    "communication": "Communication",
+    "adaptability": "Adaptability"
+  },
+  "projects": {
+    "title": "Projects",
+    "readMore": "Read more...",
+    "imageAlt": "Project image",
+    "items": {
+      "1": {
+        "shortDescription": "Web application built with React, Tailwind and Firebase on the backend.",
+        "description": "Safety Community is dedicated to addressing violence and bullying in educational institutions by improving the analysis and visualization of student-related data. It uses a comprehensive web and mobile platform with advanced software tools, including dashboards and data monitoring. The goal is to empower educational stakeholders to make informed decisions, prioritizing the well-being of the student community through data-driven strategies. This application is built with React on the front-end and Firebase services on the backend."
+      },
+      "2": {
+        "shortDescription": "Mobile application built with React Native, React Navigation and Firebase.",
+        "description": "The mobile application for Safety Community. It is built with React Native for Android devices and uses Firebase services."
+      },
+      "3": {
+        "shortDescription": "Web application built with Angular and Bootstrap, with GCP on the backend.",
+        "description": "Website for the Student Center of Civil Engineering in Metallurgy at the University of Santiago (USACH). Students can follow all the updates related to their degree here. It was built with Angular and Bootstrap on the front-end and Firebase on the backend."
+      },
+      "4": {
+        "shortDescription": "Web application built with React and Tailwind, using the Rick & Morty API.",
+        "description": "This web application uses the public Rick and Morty API to fetch characters from the series and display them on each page. It was developed with React, HTML, CSS, JavaScript and TailwindCSS."
+      },
+      "5": {
+        "shortDescription": "Task App was built with React and LocalStorage.",
+        "description": "Task App lets you keep track of pending tasks and organize yourself better. It is built with React, HTML and CSS, uses LocalStorage and incorporates Bootstrap 5."
+      },
+      "6": {
+        "shortDescription": "React app that shows GIFs.",
+        "description": "This application consumes the Giphy API to show different GIFs from the internet. It is built with React."
+      },
+      "7": {
+        "shortDescription": "This very portfolio.",
+        "description": "This portfolio is built with Next.js, HTML, CSS and Tailwind, and is deployed on GitHub Pages."
+      }
+    },
+    "code": "Code",
+    "visit": "Visit site"
+  },
+  "contact": {
+    "title": "Let's Talk!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "thanksTitle": "Thank you!",
+    "thanksMessage": "I'll get back to you as soon as possible.",
+    "subtitle": "Have a project or an opportunity in mind? Send me a message and I'll get back to you soon.",
+    "sending": "Sending...",
+    "error": "The message couldn't be sent. Check your connection and try again."
+  },
+  "common": {
+    "close": "Close",
+    "backToTop": "Back to top"
+  }
+}

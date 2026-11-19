@@ -1,23 +1,30 @@
 import React from 'react'
+import { useTranslation } from '@/i18n/I18nProvider'
+import SectionTitle from './SectionTitle'
+
+// De lo más reciente a lo más antiguo
+const STUDIES = [
+    { key: 'duoc', years: '2020 – 2024' },
+    { key: 'cumbre', years: '2017 – 2018' },
+]
 
 const Education = () => {
+    const { t } = useTranslation()
     return (
-        <div className='bg-[#3382A5] dark:bg-cyan-950 h-full'>
-            <h1 className='text-white text-3xl text-center pt-5'>My Education</h1>
-            <h1 className='text-white text-lg text-center pt-2'>Where I Studied?</h1>
-            <div className='flex flex-wrap justify-center pb-10 mt-4 gap-10'>
-                <div className='bg-[#1C1C1C] w-80 h-48  rounded flex flex-col justify-center  text-center hover:-translate-y-2 transition duration-150'>
-                    <h1 className='text-white text-2xl px-10 mb-10'>Instituto Profesional Duoc UC</h1>
-                    <h1 className='text-[#3382A5] text-xl font-semibold'>Ingenieria en informatica</h1>
-                </div>
-                <div className='bg-[#1C1C1C] w-80 h-48  rounded flex flex-col justify-center items-center text-center hover:-translate-y-2 transition duration-150'>
-                    <h1 className='text-white text-2xl px-10 mb-8 '>Instituto Cumbre de Condores</h1>
-                    <h1 className='text-[#3382A5] text-xl font-semibold'>Tecnico nivel medio en telecomunicaciones</h1>
-                </div>
-            </div>
+        <div>
+            <SectionTitle>{t('education.title')}</SectionTitle>
 
-
-
+            {/* Línea de tiempo */}
+            <ol className='relative space-y-10 border-l-2 border-brand/25 pl-8'>
+                {STUDIES.map(({ key, years }) => (
+                    <li key={key} className='relative'>
+                        <span className='absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-brand bg-paper dark:bg-night' aria-hidden='true' />
+                        <p className='text-sm text-slate-500 dark:text-slate-400'>{years}</p>
+                        <h3 className='mt-1 text-xl font-semibold'>{t(`education.${key}.degree`)}</h3>
+                        <p className='mt-1 text-slate-600 dark:text-slate-300'>{t(`education.${key}.school`)}</p>
+                    </li>
+                ))}
+            </ol>
         </div>
     )
 }

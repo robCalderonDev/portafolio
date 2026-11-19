@@ -1,54 +1,62 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { BiSolidMoon } from 'react-icons/bi';
 import { BsFillSunFill } from 'react-icons/bs';
 import { CgFileDocument } from 'react-icons/cg';
+import { useTranslation } from '@/i18n/I18nProvider';
+import LanguageDropdown from './LanguageDropdown';
 
-const Options = ({ handleChangeTheme, open, }) => {
-    const [theme, settheme] = useState('DARK')
-    console.log(theme)
-    const handleSmoothScroll = (id) => {
-        const element = document.getElementById(id);
-        element.scrollIntoView({ behavior: 'smooth' });
-    };
+const LINKS = [
+    { id: 'aboutMe', key: 'navbar.aboutMe' },
+    { id: 'proyects', key: 'navbar.projects' },
+    { id: 'contact', key: 'navbar.contact' },
+];
+
+const iconButton = 'grid h-10 w-10 place-items-center rounded-full text-slate-600 hover:bg-slate-200/60 hover:text-ink dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white transition';
+
+const Options = ({ handleChangeTheme, open, theme, onNavigate }) => {
+    const { t } = useTranslation()
+
     return (
-        <div className={`${open ? 'block ' : 'hidden'} w-full lg:flex lg:items-center  lg:w-auto   `}>
+        // En móvil es un panel bajo el navbar; en escritorio, una fila a la derecha
+        <div className={`${open ? 'flex' : 'hidden'} absolute inset-x-0 top-16 flex-col gap-6 border-b border-slate-200/70 bg-paper px-6 py-6 dark:border-white/10 dark:bg-night
+            lg:static lg:flex lg:flex-row lg:items-center lg:gap-8 lg:border-0 lg:bg-transparent lg:p-0 dark:lg:bg-transparent`}>
 
-
-            <ul className='lg:flex lg:justify-between lg:w-full w-2/6 '>
-                <button className=' lg:mr-10'>
-                    <li onClick={() => handleSmoothScroll('aboutMe')} href="#aboutMe" className='group transition duration-100 '><l1 className='block my-2 ease-in duration-500  '>About Me </l1>
-                        <span className='block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5  bg-slate-100'></span>
+            <ul className='flex flex-col gap-4 lg:flex-row lg:gap-8'>
+                {LINKS.map(({ id, key }) => (
+                    <li key={id}>
+                        <a
+                            href={`#${id}`}
+                            onClick={onNavigate}
+                            className='text-base font-medium text-slate-600 hover:text-brand-deep dark:text-slate-300 dark:hover:text-brand-light lg:text-sm transition-colors'
+                        >
+                            {t(key)}
+                        </a>
                     </li>
-                </button>
-                <button className=' lg:mr-10'>
-                    <li onClick={() => handleSmoothScroll('proyects')} href="#proyects" className='group transition duration-100 '><l1 className='block my-2 ease-in duration-500  '>Proyects </l1>
-                        <span className='block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-slate-100'></span>
-                    </li>
-                </button>
-                <button className=' lg:mr-10'>
-                    <li onClick={() => handleSmoothScroll('contact')} href="#contact" className='group transition duration-100 '><l1 className='block my-2 ease-in duration-500  '>Contact </l1>
-                        <span className='block  max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5  bg-slate-100'></span>
-                    </li>
-                </button>
-
+                ))}
             </ul>
 
-            <div className='flex '>
-                <Link href='https://robcalderondev.github.io/portafolio/assets/RobertCalderonCV.pdf' target='_blank'>  <button className='   min-w-fit  border-solid border border-white rounded flex  py-1 h-10 px-3  my-2 hover:-translate-y-0.5 transition duration-150 '>
-                    <h1 className='text-sm my-1 pr-4  '>CV</h1>
+            <div className='flex items-center gap-2'>
+                {/* Descarga el CV del idioma activo (rutas en i18n/locales/*.json → navbar.cvFile) */}
+                <a
+                    href={t('navbar.cvFile')}
+                    download={t('navbar.cvDownloadName')}
+                    title={t('navbar.cvDownload')}
+                    aria-label={t('navbar.cvDownload')}
+                    className='mr-2 inline-flex h-10 items-center gap-2 rounded-full border border-brand/50 px-4 text-sm font-medium text-brand-deep hover:bg-brand/10 dark:border-brand-light/40 dark:text-brand-light dark:hover:bg-brand-light/10 transition-colors'
+                >
+                    {t('navbar.cv')}
+                    <CgFileDocument className='h-5 w-5' />
+                </a>
 
-                    <CgFileDocument className='w-6 h-6 hover:text-cyan-950 dark:text-white dark:hover:text-slate-300' />
-                </button></Link>
+                {/* Selector de idioma: ícono que despliega Español / English */}
+                <LanguageDropdown className={iconButton} />
 
-                <button onClick={handleChangeTheme} className=' mx-6 lg:mt-2 lg:block my-2'>
-                    {theme === 'light' ? <BsFillSunFill className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />
-                        : <BiSolidMoon className='h-6 w-6 hover:-translate-y-0.5 transition duration-150' />}
-
+                <button type='button' onClick={handleChangeTheme} aria-label={t('navbar.toggleTheme')} title={t('navbar.toggleTheme')} className={iconButton}>
+                    {theme === 'dark'
+                        ? <BsFillSunFill className='h-5 w-5' />
+                        : <BiSolidMoon className='h-5 w-5' />}
                 </button>
             </div>
-
-
         </div>
     );
 };

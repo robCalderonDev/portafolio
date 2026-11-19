@@ -1,65 +1,30 @@
 import Image from 'next/image'
 import React from 'react'
+import { useTranslation } from '@/i18n/I18nProvider'
+import SectionTitle from './SectionTitle'
+
+const SOFT_SKILLS = [
+    { img: 'team', key: 'softSkills.teamwork' },
+    { img: 'communication', key: 'softSkills.communication' },
+    { img: 'adaptability', key: 'softSkills.adaptability' },
+]
 
 const Soft = () => {
+    const { t } = useTranslation()
     return (
         <div>
-            <div className='flex flex-col items-center justify-center w-full mt-10 '>
-                <h1 className='text-4xl font-semibold'>Soft Skills</h1>
-                <hr className="w-44 h-px my-1 bg-[#3B94A8] border-0" />
+            <SectionTitle>{t('softSkills.title')}</SectionTitle>
 
-                <div className="flex flex-wrap justify-center xl:gap-10  gap-y-10    my-12  2xl:mx-80 ">
-                    <div >
-                        <div className="text-6xl border-2 border-none rounded-xl lg:mx-8 mx-4 bg-gray-100 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 flex items-center justify-center hover:drop-shadow-md hover:-translate-y-2 transition duration-150 ">
-                            <Image
-                                src="assets/team.png"
-                                width={80}
-                                height={80}
-                                layout='responsive'
-                                alt="Robert Image"
-
-                            />
-                        </div>
-
-                        <h1 className='text-center text-2xl font-semibold'>Team Work</h1>
-                    </div>
-
-                    <div className=' '>
-                        <div className="text-6xl border-2 border-none rounded-xl mx-auto  bg-gray-100 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 flex items-center justify-center hover:drop-shadow-md hover:-translate-y-2 transition duration-150 ">
-                            <Image
-                                src="assets/communication.png"
-                                width={80}
-                                height={80}
-                                layout='responsive'
-                                alt="Comunnication Image"
-
-                            />
-                        </div>
-
-                        <h1 className='text-center text-2xl font-semibold'>Communication</h1>
-                    </div>
-                    <div className=' '>
-                        <div className="text-6xl border-2 border-none rounded-xl lg:mx-8 mx-4 bg-gray-100 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 flex items-center justify-center hover:drop-shadow-md hover:-translate-y-2 transition duration-150 ">
-                            <Image
-                                src="assets/adaptability.png"
-                                width={80}
-                                height={80}
-                                layout='responsive'
-                                alt="Adaptability Image"
-
-                            />
-                        </div>
-
-                        <h1 className='text-center text-2xl font-semibold'>Adaptability</h1>
-                    </div>
-
-
-
-
-
-                </div>
-            </div>
-
+            <ul className='space-y-4'>
+                {SOFT_SKILLS.map(({ img, key }) => (
+                    <li key={key} className='flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 dark:border-white/10 dark:bg-night-surface'>
+                        <span className='grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-mist p-2'>
+                            <Image src={`assets/${img}.png`} width={40} height={40} className='h-full w-full object-contain' alt='' />
+                        </span>
+                        <span className='text-lg font-medium'>{t(key)}</span>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

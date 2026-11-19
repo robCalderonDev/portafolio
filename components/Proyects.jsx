@@ -2,37 +2,47 @@ import React, { useState } from 'react'
 import { Card } from './Card'
 import { descriptions } from './info/info'
 import MoreInfoModal from './modals/MoreInfoModal'
+import SectionTitle from './SectionTitle'
+import { useTranslation } from '@/i18n/I18nProvider'
+
 const Proyects = () => {
+    const { t } = useTranslation()
 
     const [modal, setModal] = useState(false)
-    const [proyect, setProyect] = useState()
+    const [proyectId, setProyectId] = useState()
+
+    // Une los datos fijos con los textos del idioma actual
+    const proyects = descriptions.map((p) => ({
+        ...p,
+        description: t(`projects.items.${p.id}.description`),
+        shortDescription: t(`projects.items.${p.id}.shortDescription`),
+    }))
+
+    // Se guarda solo el id, así el modal abierto también cambia de idioma
+    const proyect = proyects.find((item) => item.id === proyectId)
 
     const searchProyect = (id) => {
-
-        setProyect(descriptions.find(item => item.id === id))
-        setModal(!modal)
+        setProyectId(id)
+        setModal(true)
     };
+
     return (
-        <div id='proyects' className="mt-10">
-            <div className="flex flex-col items-center justify-center w-full">
-                <h1 className="text-4xl font-semibold">Proyects</h1>
-                <hr className="w-44 h-px my-1 bg-[#3B94A8] border-0" />
-            </div>
-            <div className='flex flex-wrap justify-center pb-10 mt-4 gap-10 '>
-                {descriptions.map((i) => (
-                    <Card description={i.description} id={i.id} page={i.page} code={i.code} title={i.title} images={i.images} searchProyect={searchProyect} shortDescription={i.shortDescription} />
-                ))}
+        <section id='proyects' className='border-y border-slate-200 bg-white dark:border-white/10 dark:bg-night-surface/40'>
+            <div className='mx-auto max-w-6xl px-6 py-20'>
+                <SectionTitle>{t('projects.title')}</SectionTitle>
 
+                <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+                    {proyects.map((i) => (
+                        <Card key={i.id} id={i.id} page={i.page} code={i.code} title={i.title} images={i.images} searchProyect={searchProyect} shortDescription={i.shortDescription} />
+                    ))}
+                </div>
             </div>
-            {
-                modal && (<div>
-                    <MoreInfoModal setModal={setModal} modal={modal} proyect={proyect} />
-                </div>)
-            }
-        </div>
 
+            {modal && proyect && (
+                <MoreInfoModal setModal={setModal} modal={modal} proyect={proyect} />
+            )}
+        </section>
     )
 }
 
 export default Proyects
-
