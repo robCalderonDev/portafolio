@@ -37,18 +37,10 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className=' mt-10 fade-in-element'>
-            <div className='flex  justify-center'>
-                <h1 className='text-2xl lg:text-4xl mr-10 font-semibold lg:mt-1 mt-3'>Let's Talk!</h1>
-                <Image
-                    src='assets/email.png'
-                    width={50}
-                    height={50}
-                    className=''
-                    alt="mail"
-                />
-
-
+        <section id='contact' className='mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1fr_1.4fr]'>
+            <div>
+                <SectionTitle>{t('contact.title')}</SectionTitle>
+                <p className='max-w-sm text-lg leading-relaxed text-slate-600 dark:text-slate-300'>{t('contact.subtitle')}</p>
             </div>
 
             <form ref={form} onSubmit={sendEmail} className='space-y-5 rounded-2xl border border-slate-200 bg-white p-6 dark:border-white/10 dark:bg-night-surface md:p-8'>
