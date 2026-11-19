@@ -1,100 +1,37 @@
 import Image from 'next/image'
 import React from 'react'
+import { useTranslation } from '@/i18n/I18nProvider'
+import SectionTitle from './SectionTitle'
+
+const SKILLS = [
+    { img: 'html', name: 'HTML' },
+    { img: 'css', name: 'CSS' },
+    { img: 'react', name: 'React' },
+    { img: 'next', name: 'Next.js' },
+    { img: 'pyton', name: 'Python' },
+    { img: 'github', name: 'GitHub' },
+    { img: 'java', name: 'Java' },
+    { img: 'tailwind', name: 'Tailwind' },
+]
 
 const Content = () => {
+    const { t } = useTranslation()
     return (
-        <>
-            <div className="    mx-auto         mt-10">
-                <div className='flex flex-col items-center justify-center w-full '>
-                    <h1 className='text-4xl font-semibold'>Skills</h1>
-                    <hr className="w-44 h-px my-1 bg-[#3B94A8] border-0" />
-                </div>
+        <section className='mx-auto max-w-6xl px-6 py-16'>
+            <SectionTitle>{t('skills.title')}</SectionTitle>
 
-
-
-                <div className="flex flex-wrap justify-center xl:gap-10  gap-y-10    my-12  2xl:mx-80 ">
-                    <div className="text-6xl border-2 border-none rounded-xl lg:mx-8 mx-4 bg-gray-100  dark:bg-gray-600 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 flex items-center justify-center hover:drop-shadow-md hover:-translate-y-2 transition duration-150 ">
-                        <Image
-                            src="assets/html.png"
-                            width={80}
-                            height={80}
-                            layout='responsive'
-                            alt="Html Image"
-
-                        />
-                    </div>
-
-
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-gray-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">  <Image
-                        src="assets/css.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="Css Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">  <Image
-                        src="assets/react.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="React Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
-                        src="assets/next.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="Next Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
-                        src="assets/pyton.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="Python Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none   rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
-                        src="assets/github.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="github Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100   dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
-                        src="assets/java.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="Java Image"
-
-                    /></div>
-                    <div className=" text-6xl border-2 border-none  rounded-xl  lg:mx-8 mx-4 bg-gray-100 dark:bg-slate-700 w-28 h-28 2xl:w-32 2xl:h-32 flex-shrink-0 hover:drop-shadow-md hover:-translate-y-2 transition duration-150">   <Image
-                        src="assets/tailwind.png"
-                        width={80}
-                        height={80}
-                        layout='responsive'
-                        alt="Tailwind Image"
-
-
-                    /></div>
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-
-        </>
+            <ul className='grid grid-cols-4 gap-3 sm:gap-4 lg:grid-cols-8'>
+                {SKILLS.map(({ img, name }) => (
+                    <li key={name} className='flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white px-2 py-4 dark:border-white/10 dark:bg-night-surface sm:gap-3 sm:p-5'>
+                        {/* fondo blanco fijo para que los logos oscuros (Next, GitHub) se vean en modo oscuro */}
+                        <span className='grid h-11 w-11 place-items-center rounded-xl bg-white p-1.5 sm:h-14 sm:w-14 sm:p-2'>
+                            <Image src={`assets/${img}.png`} width={48} height={48} className='h-full w-full object-contain' alt='' />
+                        </span>
+                        <span className='text-xs font-medium text-slate-600 dark:text-slate-300 sm:text-sm'>{name}</span>
+                    </li>
+                ))}
+            </ul>
+        </section>
     )
 }
 

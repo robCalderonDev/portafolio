@@ -7,10 +7,11 @@ export default class MyDocument extends Document {
         <Head>
 
 
-          <link rel="shortcut icon" href="assets/robert.png" />
+          <link rel="icon" type="image/png" href="assets/favicon-rob.png" />
+          <link rel="apple-touch-icon" href="assets/apple-touch-icon-rob.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
         </Head>
 
 

@@ -1,20 +1,21 @@
-import Link from 'next/link'
 import React from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 const Footer = () => {
     return (
-        <div>
-            <div className='bg-[#225166] py-2 flex  justify-center gap-x-5'>
-                <Link href={'https://github.com/robCalderonDev'} target='blank'><BsGithub className='w-8 h-8 text-white ' /></Link>
-                <Link href={'https://www.linkedin.com/in/robert-calderon-vasquez/'} target='blank'><BsLinkedin className='w-8 h-8 text-white ' /></Link>
-
-
-
+        <footer className='border-t border-slate-200 dark:border-white/10'>
+            <div className='mx-auto flex max-w-6xl items-center justify-between px-6 py-8 text-sm text-slate-500 dark:text-slate-400'>
+                <p>© {new Date().getFullYear()} Robert Calderón</p>
+                <div className='flex gap-4'>
+                    <a href='https://github.com/robCalderonDev' target='_blank' rel='noopener noreferrer' aria-label='GitHub' className='hover:text-brand-deep dark:hover:text-brand-light transition-colors'>
+                        <BsGithub className='h-6 w-6' />
+                    </a>
+                    <a href='https://www.linkedin.com/in/robert-calderon-vasquez/' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn' className='hover:text-brand-deep dark:hover:text-brand-light transition-colors'>
+                        <BsLinkedin className='h-6 w-6' />
+                    </a>
+                </div>
             </div>
-            <div className='bg-[#3B94A8]'><h1 className='text-white text-center'>@2023 RobCalderonDev</h1></div>
-
-        </div>
+        </footer>
     )
 }
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import Options from './Options';
+import { useTranslation } from '@/i18n/I18nProvider';
 
 const Navbar = () => {
+    const { t } = useTranslation();
     const [theme, setTheme] = useState('light');
     const [open, setOpen] = useState(false);
 
@@ -20,28 +21,31 @@ const Navbar = () => {
     };
 
     return (
-        <div className='fixed top-0 left-0 w-full  z-50 bg-[#376F9B] lg:h-18 dark:bg-cyan-950 flex items-center justify-between max-w-full text-white font-medium text-xl py-auto px-[8%] flex-wrap '>
-            <div className='py-1 flex min-w-fit'>
-                {/* <Image
-                src="/assets/robert.png"
-                className='mr-10'
-                width={60}
-                height={100}
-                layout="fixed"
-                alt='Robert Image'
-            /> */}
-                <div className='text-md py-3'>
-                    <h1>Rob Calderon Portafolio</h1>
-                </div>
-            </div>
-            <button>
-                <AiOutlineMenu className='lg:hidden block h-7 w-7' onClick={() => setOpen(!open)} />
+        <header className='fixed top-0 inset-x-0 z-50 border-b border-slate-200/70 bg-paper/80 backdrop-blur-md dark:border-white/10 dark:bg-night/80'>
+            <nav className='relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6'>
+                <a href='#aboutMe' className='font-display text-lg font-semibold tracking-tight'>
+                    {t('navbar.title')}
+                </a>
 
-            </button>
-            <Options handleChangeTheme={handleChangeTheme} open={open} theme={theme} />
-        </div>
+                <button
+                    type='button'
+                    className='lg:hidden grid h-10 w-10 place-items-center rounded-full hover:bg-slate-200/60 dark:hover:bg-white/10'
+                    aria-label={t('navbar.openMenu')}
+                    aria-expanded={open}
+                    onClick={() => setOpen(!open)}
+                >
+                    {open ? <AiOutlineClose className='h-6 w-6' /> : <AiOutlineMenu className='h-6 w-6' />}
+                </button>
 
-
+                <Options
+                    handleChangeTheme={handleChangeTheme}
+                    open={open}
+                    theme={theme}
+                    onNavigate={() => setOpen(false)}
+                />
+            </nav>
+        </header>
     );
 };
-export default Navbar
+
+export default Navbar;
